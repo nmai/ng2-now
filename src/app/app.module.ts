@@ -8,11 +8,11 @@ import { AppComponent } from './app.component'
 import { HomeModule } from './home/home.module'
 
 import { ExamplePipe } from './pipes/example.pipe'
+import { ExampleService } from './services/example.service'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' },
-  { path: 'profiles', loadChildren: './+profile-view/profile-view.module#ProfileViewModule'}
 ]
 
 @NgModule({
@@ -23,7 +23,12 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+  ],
+  providers: [
+    ExampleService,
+    { provide: 'EXAMPLE_API_URL', useValue: 'http://test.com' },
+    { provide: 'EXAMPLE_COOKIE_NAME', useValue: 'COOKIE' }
   ],
   bootstrap: [AppComponent]
 })

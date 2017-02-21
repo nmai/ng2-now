@@ -42,7 +42,7 @@ module.exports = {
           {
             loader: 'sass-mixins-loader',
             options: {
-              sassResources: './src/assets/sass-res/**/*.scss'
+              sassResources: './src/assets/sass-resources/**/*.scss'
             }
           }
         ]

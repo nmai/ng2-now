@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core'
-import { AppDiTest } from '../services/app-di-test'
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+
+  get showMessage(): boolean {
+    return true
+  }
   constructor(
-    private appDiTest: AppDiTest
   ) {}
 
   ngOnInit() { }
+
+  sayHi() {
+    alert('HI')
+  }
 }

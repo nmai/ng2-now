@@ -9,6 +9,6 @@ export class ExamplePipe implements PipeTransform {
    * or a promise for asynchronous stuff.
    */
   transform(value: number, param1: string, param2?: string): Promise<number> {
-    return new Promise.resolve()
+    return Promise.resolve(1)
   }
 }

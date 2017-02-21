@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-import { AppDiTest } from '../services/app-di-test'
 
 @Component({
   selector: 'lazy',
@@ -7,7 +6,6 @@ import { AppDiTest } from '../services/app-di-test'
 })
 export class LazyComponent implements OnInit {
   constructor(
-    private appDiTest: AppDiTest
   ) {}
 
   ngOnInit() { }
